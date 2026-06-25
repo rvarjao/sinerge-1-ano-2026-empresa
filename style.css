@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+header {
+    background: #18202f;
+    color: white;
+    padding: 70px 0;
+}
+
+.tag {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #9fd3ff;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin: 0 0 20px;
+}
+
+header p {
+    max-width: 760px;
+    font-size: 1.1rem;
+    color: #e4e8ef;
+}
+
+main {
+    padding: 45px 0 60px;
+}
+
+section {
+    margin-bottom: 45px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    color: #18202f;
+}
+
+.resumo {
+    background: white;
+    border: 1px solid #e1e5ea;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+}
+
+.resumo p {
+    margin-top: 0;
+    color: #444;
+}
+
+.objetivos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.objetivo {
+    background: #f8fafc;
+    border: 1px solid #e5e9f0;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.objetivo h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #18202f;
+}
+
+.objetivo p {
+    margin-bottom: 0;
+    color: #555;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e1e5ea;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #18202f;
+}
+
+.card p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.card a {
+    display: inline-block;
+    text-decoration: none;
+    background: #18202f;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.card a:hover {
+    background: #2d3a55;
+}
+
+.produto {
+    background: white;
+    border: 1px solid #e1e5ea;
+    border-radius: 14px;
+    padding: 28px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+    margin-top: 20px;
+}
+
+.etapas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.etapa {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+}
+
+.etapa .icone {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+.etapa h3 {
+    margin: 0 0 6px;
+    color: #166534;
+}
+
+.etapa p {
+    margin: 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.professores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.professor {
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    border-radius: 12px;
+    padding: 18px;
+}
+
+.professor h3 {
+    margin: 0 0 8px;
+    color: #854d0e;
+}
+
+.professor p {
+    margin: 0;
+    color: #555;
+}
+
+.info-box {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 22px 28px;
+    margin-top: 20px;
+}
+
+.info-box h3 {
+    margin: 0 0 8px;
+    color: #1e40af;
+}
+
+.info-box p {
+    margin: 0;
+    color: #444;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #18202f;
+    color: #d7dce5;
+    font-size: 0.9rem;
+}
