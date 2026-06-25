@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trabalhos do 1º Ano</title>
+  <title>Sinerge — Trabalho 2º Trimestre</title>
 
   <style>
     * {
@@ -146,6 +146,88 @@
       background: #2d3a55;
     }
 
+    .produto {
+      background: white;
+      border: 1px solid #e1e5ea;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+      margin-top: 20px;
+    }
+
+    .etapas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .etapa {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+    }
+
+    .etapa .icone {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+
+    .etapa h3 {
+      margin: 0 0 6px;
+      color: #166534;
+    }
+
+    .etapa p {
+      margin: 0;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .professores {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .professor {
+      background: #fefce8;
+      border: 1px solid #fde68a;
+      border-radius: 12px;
+      padding: 18px;
+    }
+
+    .professor h3 {
+      margin: 0 0 8px;
+      color: #854d0e;
+    }
+
+    .professor p {
+      margin: 0;
+      color: #555;
+    }
+
+    .info-box {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 12px;
+      padding: 22px 28px;
+      margin-top: 20px;
+    }
+
+    .info-box h3 {
+      margin: 0 0 8px;
+      color: #1e40af;
+    }
+
+    .info-box p {
+      margin: 0;
+      color: #444;
+    }
+
     footer {
       text-align: center;
       padding: 25px;
@@ -159,14 +241,15 @@
 
   <header>
     <div class="container">
-      <p class="tag">Projeto de Programação Web</p>
+      <p class="tag">Trabalho de 2º Trimestre</p>
 
       <h1>Sinerge — Empresa Simulada</h1>
 
       <p>
-        Esta página reúne os trabalhos desenvolvidos pelos estudantes do 1º ano,
-        simulando os setores de uma empresa. Cada grupo ficou responsável por um
-        departamento e criou sua página usando HTML e CSS, publicada pelo GitHub Pages.
+        A turma se divide em 4 setores — RH, Marketing, Finanças e Produção — para
+        criar e apresentar um projeto empresarial completo. O produto da empresa é
+        um brinquedo feito de materiais recicláveis, apresentado em três etapas:
+        a montar, semi-acabado e acabado.
       </p>
     </div>
   </header>
@@ -177,49 +260,37 @@
       <h2>Sobre o projeto</h2>
 
       <p>
-        Os estudantes foram organizados em 4 grupos, cada um representando um
-        setor da empresa Sinerge. O desafio foi criar páginas estáticas que
-        apresentassem o departamento, suas funções e sua importância dentro da
-        organização.
+        A turma toda se divide em 4 setores: RH, Marketing, Finanças e Produção.
+        Cada setor é responsável por diversas funções. A turma irá apresentar o
+        projeto empresarial, como deverá funcionar e como funcionou cada setor,
+        bem como a apresentação documentacional de relatórios de gestão, o que
+        cada um fez e como foi desenvolvido o setor.
       </p>
 
       <p>
-        Além da construção das páginas, o trabalho aproximou os estudantes do
-        processo real de publicação de um site, utilizando repositórios no GitHub
-        e o GitHub Pages para disponibilizar o conteúdo na internet.
+        A empresa criará um brinquedo feito de materiais recicláveis. O brinquedo
+        precisa ser apresentado de três formas: A montar, Semi-acabado e Acabado.
+        Haverá um representante da empresa definido como o Dono no organograma,
+        que servirá de base para manter a ordem da empresa.
       </p>
 
-      <div class="objetivos">
-        <div class="objetivo">
-          <h3>HTML</h3>
-          <p>
-            Estruturar o conteúdo da página com títulos, parágrafos, links,
-            imagens e seções.
-          </p>
+      <div class="etapas">
+        <div class="etapa">
+          <div class="icone">&#x1f9e9;</div>
+          <h3>A montar</h3>
+          <p>Peças e materiais separados, prontos para montagem.</p>
         </div>
 
-        <div class="objetivo">
-          <h3>CSS</h3>
-          <p>
-            Aplicar estilos para melhorar a aparência, o espaçamento,
-            as cores e a organização visual.
-          </p>
+        <div class="etapa">
+          <div class="icone">&#x1f527;</div>
+          <h3>Semi-acabado</h3>
+          <p>Produto em processo de montagem, parcialmente finalizado.</p>
         </div>
 
-        <div class="objetivo">
-          <h3>Organização</h3>
-          <p>
-            Separar os arquivos do projeto em pastas e manter uma estrutura
-            clara para publicação.
-          </p>
-        </div>
-
-        <div class="objetivo">
-          <h3>Publicação</h3>
-          <p>
-            Disponibilizar os trabalhos na internet usando repositório no GitHub
-            e GitHub Pages.
-          </p>
+        <div class="etapa">
+          <div class="icone">&#x2705;</div>
+          <h3>Acabado</h3>
+          <p>Produto final pronto para uso e apresentação.</p>
         </div>
       </div>
     </section>
@@ -234,29 +305,84 @@
       <div class="grid">
 
         <article class="card">
-          <h3>Financeiro</h3>
-          <p>Controle de receitas, despesas, orçamentos e planejamento financeiro da empresa.</p>
-          <a href="financeiro/index.html">Acessar setor</a>
-        </article>
-
-        <article class="card">
-          <h3>RH</h3>
-          <p>Gestão de pessoas, recrutamento, treinamento e desenvolvimento dos colaboradores.</p>
+          <h3>Recursos Humanos</h3>
+          <p>
+            A critério do Prof. Murilo: controle de colaboradores, documento da cultura
+            organizacional, entrevista para promoção e regras para mudanças de setores.
+          </p>
           <a href="rh/index.html">Acessar setor</a>
         </article>
 
         <article class="card">
-          <h3>Produção</h3>
-          <p>Planejamento e execução dos processos produtivos, qualidade e logística.</p>
-          <a href="produção/index.html">Acessar setor</a>
+          <h3>Financeiro</h3>
+          <p>
+            Registro de todos os custos financeiros e de tempo, diário de bordo com
+            detalhes, mudanças feitas, mão de obra utilizada, prazos estipulados e metas.
+          </p>
+          <a href="financeiro/index.html">Acessar setor</a>
         </article>
 
         <article class="card">
           <h3>Marketing</h3>
-          <p>Estratégias de divulgação, identidade visual, comunicação e relacionamento com o público.</p>
+          <p>
+            Estrutura da empresa e produto, marca, slogan, palheta de cores, publicidade,
+            missão, visão e valores, pesquisa de mercado e técnica de venda.
+          </p>
           <a href="nexuxinfitymarketing/index.html">Acessar setor</a>
         </article>
 
+        <article class="card">
+          <h3>Produção</h3>
+          <p>
+            Processo de produção com materiais recicláveis, produto semi-acabado,
+            fluxograma de produção e apresentação do produto acabado e funcionamento do jogo.
+          </p>
+          <a href="produção/index.html">Acessar setor</a>
+        </article>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>Professores Responsáveis</h2>
+
+      <div class="professores">
+        <div class="professor">
+          <h3>Rodrigo Gomes</h3>
+          <p>Administração</p>
+        </div>
+
+        <div class="professor">
+          <h3>Murilo Mendes</h3>
+          <p>Empreendedorismo</p>
+        </div>
+
+        <div class="professor">
+          <h3>Ricardo Varjão</h3>
+          <p>Desenvolvimento de Sistemas</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Apresentação e Cronograma</h2>
+
+      <div class="info-box">
+        <h3>1º e 2º Ano de ADM</h3>
+        <p>
+          Apresentação do projeto empresarial na última semana antes das provas do 2º Trimestre.
+        </p>
+      </div>
+
+      <div class="info-box" style="margin-top: 14px;">
+        <h3>2º Ano DS — Pesquisa Empresarial</h3>
+        <p>
+          A turma será dividida em duas partes. Cada parte pesquisará uma das empresas
+          que apresentarão. O relatório de pesquisa será subdividido, fazendo com que cada
+          aluno busque as informações de cada setor. O trabalho será idealizado como
+          espiões industriais, coletando informações para verificar se os colaboradores
+          das empresas estão realmente executando suas tarefas.
+        </p>
       </div>
     </section>
 
@@ -264,7 +390,7 @@
 
   <footer>
     <p>
-      Sinerge — Projeto desenvolvido pelos estudantes do 1º ano — HTML, CSS e GitHub Pages
+      Sinerge — Trabalho de 2º Trimestre — Empresa Simulada com Brinquedo Reciclável
     </p>
   </footer>
 
