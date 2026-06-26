@@ -3,95 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Relatórios Empresariais</title>
+    <title>Produção - Sinerge</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-    <!-- Cabeçalho -->
     <header>
-        <div class="Nexus Infity">
+        <div class="logo">
             <img src="https://yt3.googleusercontent.com/ykRuKvkEJM4nFkrM_wslB9xLAhX7mJ2G2AqRXHHp3j1RI1TUQ2aprEpvTnYxPgSZs1jyHPo6sOg=s900-c-k-c0x00ffffff-no-rj" alt="Logo">
         </div>
-
         <div class="titulo">
-            <h1>Sistema de Relatórios Empresariais</h1>
+            <h1>Produção</h1>
         </div>
     </header>
 
-    <!-- Conteúdo -->
     <main>
-
-        <!-- Menu lateral -->
-        <aside class="menu">
-
-            <button class="menu-btn">
-                Novo Relatório
-            </button>
-
-            <button class="menu-btn">
-                Relatórios
-            </button>
-
-        </aside>
-
-        <!-- Área principal -->
         <section class="conteudo">
+            <a href="diario.html" class="menu-btn">Novo Relatório</a>
+            <button class="menu-btn" id="btn-listar" onclick="listarRelatorios()">Listar Relatórios</button>
 
-            <h2>RELATÓRIO DO DIA</h2>
-
-            <form id="relatorio">
-
-                <div class="linha">
-                    <label>Setor:</label>
-                    <input type="text" placeholder="Produção">
-                </div>
-
-                <div class="linha">
-                    <label>Responsável:</label>
-                    <input type="text" placeholder="Guilherme">
-                </div>
-
-                <div class="linha">
-                    <label>Data:</label>
-                    <input type="date">
-                </div>
-
-                <div class="campo">
-                    <label>Atividades</label>
-                    <textarea rows="4"></textarea>
-                </div>
-
-                <div class="campo">
-                    <label>Problemas</label>
-                    <textarea rows="4"></textarea>
-                </div>
-
-                <div class="campo">
-                    <label>Soluções</label>
-                    <textarea rows="4"></textarea>
-                </div>
-
-                <div class="campo">
-                    <label>Observações</label>
-                    <textarea rows="4"></textarea>
-                </div>
-
-                <button type="submit" class="salvar">
-                    Salvar Relatório
-                </button>
-
-            </form>
-
+            <div id="lista-relatorios"></div>
         </section>
-
     </main>
 
 </div>
 
-<script src="script.js"></script>
+<script>
+// =====================================================
+//  EXERCÍCIO: Complete o código para listar relatórios
+// =====================================================
+
+// 1) URL do Google Apps Script (já preenchida)
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzZJT6RIi6i5XMHLBA_TpK05jsW51PPaqLiv8_FcldpEsjWysc864cua7YGr26JuHDQ/exec";
+
+function listarRelatorios() {
+
+    // 2) Pegue os elementos da página usando document.getElementById
+    //    - o botão tem id "btn-listar"
+    //    - a div onde aparece a lista tem id "lista-relatorios"
+    const btn = ____;
+    const lista = ____;
+
+    // 3) Enquanto carrega, desabilite o botão e mude o texto dele
+    //    - btn.disabled = ????
+    //    - btn.textContent = "????"
+    //    - lista.innerHTML = "" (limpa a lista)
+    ____;
+    ____;
+    ____;
+
+    // 4) Crie um nome único para o callback (JSONP)
+    //    Usamos Date.now() para gerar um número diferente a cada clique
+    const callbackName = "cb_" + Date.now();
+
+    // 5) Registre a função de callback no objeto window
+    //    Quando o Google responder, ele vai chamar essa função passando os dados
+    window[callbackName] = function (dados) {
+        delete window[callbackName];
+
+        // 6) Verifique se existem dados
+        //    Se dados.length for 0, mostre "Nenhum relatório encontrado."
+        //    Senão, monte a tabela HTML
+        if (____) {
+            lista.innerHTML = "<p>Nenhum relatório encontrado.</p>";
+        } else {
+
+            // 7) Monte o HTML da tabela
+            //    Comece com o <thead> (cabeçalho) e depois percorra os dados
+            //    com forEach para criar cada <tr> (linha)
+            //    Cada relatório (r) tem: r.data, r.setor, r.responsavel,
+            //    r.atividades, r.problemas, r.solucoes, r.observacoes
+            let html = "<table><thead><tr><th>Data</th><th>Setor</th><th>Responsável</th><th>Atividades</th><th>Problemas</th><th>Soluções</th><th>Observações</th></tr></thead><tbody>";
+
+            dados.forEach(r => {
+                html += `<tr>
+                    <td>${____}</td>
+                    <td>${____}</td>
+                    <td>${____}</td>
+                    <td>${____}</td>
+                    <td>${____}</td>
+                    <td>${____}</td>
+                    <td>${____}</td>
+                </tr>`;
+            });
+
+            html += "</tbody></table>";
+
+            // 8) Coloque o HTML dentro da div lista
+            //    Use: lista.innerHTML = ????
+            ____;
+        }
+
+        // 9) Reabilite o botão e restaure o texto original
+        btn.disabled = ____;
+        btn.textContent = "____";
+    };
+
+    // 10) Crie uma tag <script> para fazer a requisição JSONP
+    //     O src deve ser a URL do Google + "?callback=" + callbackName
+    //     Depois adicione essa tag ao document.body
+    const script = document.createElement("script");
+    script.src = ____;
+    script.onerror = function () {
+        delete window[callbackName];
+        lista.innerHTML = "<p>Erro ao carregar relatórios.</p>";
+        btn.disabled = false;
+        btn.textContent = "Listar Relatórios";
+    };
+    document.body.appendChild(script);
+}
+</script>
 
 </body>
 </html>

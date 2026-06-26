@@ -164,3 +164,39 @@ textarea{
     background:#1d7e34;
 
 }
+
+/* Tabela de relatórios */
+
+#lista-relatorios{
+    margin-top:30px;
+}
+
+#lista-relatorios table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+#lista-relatorios th,
+#lista-relatorios td{
+    border:1px solid #ccc;
+    padding:10px;
+    text-align:left;
+    font-size:14px;
+}
+
+#lista-relatorios th{
+    background:#1f3c88;
+    color:white;
+}
+
+#lista-relatorios tr:nth-child(even){
+    background:#f0f0f0;
+}
+
+.conteudo .menu-btn{
+    display:inline-block;
+    text-align:center;
+    text-decoration:none;
+    margin-right:10px;
+    margin-bottom:20px;
+}

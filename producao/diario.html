@@ -1,29 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diário</title>
+    <title>Sistema de Relatórios Empresariais</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table>
-        <thead>
-            <tr>
-                <th>Data</th>
-                <th>Descrição</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>19/06/2026</td>
-                <td>Fizemos a página do projeto</td>
-            </tr>
 
-            <tr>
-                <td>19/06/2026</td>
-                <td>Fizemos a página do projeto</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container">
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="Nexus Infity">
+            <img src="https://yt3.googleusercontent.com/ykRuKvkEJM4nFkrM_wslB9xLAhX7mJ2G2AqRXHHp3j1RI1TUQ2aprEpvTnYxPgSZs1jyHPo6sOg=s900-c-k-c0x00ffffff-no-rj" alt="Logo">
+        </div>
+
+        <div class="titulo">
+            <h1>Sistema de Relatórios Empresariais</h1>
+        </div>
+    </header>
+
+    <!-- Conteúdo -->
+    <main>
+
+        <!-- Menu lateral -->
+        <aside class="menu">
+
+            <button class="menu-btn">
+                Novo Relatório
+            </button>
+
+            <button class="menu-btn">
+                Relatórios
+            </button>
+
+        </aside>
+
+        <!-- Área principal -->
+        <section class="conteudo">
+
+            <h2>RELATÓRIO DO DIA</h2>
+
+            <form id="relatorio">
+
+                <div class="linha">
+                    <label>Setor:</label>
+                    <input type="text" name="setor" placeholder="Produção" required>
+                </div>
+
+                <div class="linha">
+                    <label>Responsável:</label>
+                    <input type="text" name="responsavel" placeholder="Guilherme" required>
+                </div>
+
+                <div class="linha">
+                    <label>Data:</label>
+                    <input type="date" name="data" required>
+                </div>
+
+                <div class="campo">
+                    <label>Atividades</label>
+                    <textarea rows="4" name="atividades"></textarea>
+                </div>
+
+                <div class="campo">
+                    <label>Problemas</label>
+                    <textarea rows="4" name="problemas"></textarea>
+                </div>
+
+                <div class="campo">
+                    <label>Soluções</label>
+                    <textarea rows="4" name="solucoes"></textarea>
+                </div>
+
+                <div class="campo">
+                    <label>Observações</label>
+                    <textarea rows="4" name="observacoes"></textarea>
+                </div>
+
+                <button type="submit" class="salvar">
+                    Salvar Relatório
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
