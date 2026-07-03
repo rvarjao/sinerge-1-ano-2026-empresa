@@ -1,0 +1,589 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b1320;
+    color: #ffffff;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ========================= */
+/* SIDEBAR */
+/* ========================= */
+
+.sidebar {
+    width: 260px;
+    background: #0f1b2d;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .logo h2 {
+    color: #00d084;
+    font-size: 22px;
+}
+
+.sidebar .logo span {
+    font-size: 12px;
+    color: #aaa;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #cfd8dc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background: #16263d;
+    color: #099cf1;
+}
+
+.sidebar ul li.active a {
+    background: #dbe365;
+    color: #0b1320;
+    border-radius: 12px;
+    border: 1px solid rgb(73, 252, 118);
+    font-weight: bold;
+}
+
+/* ========================= */
+/* CONTEÚDO PRINCIPAL */
+/* ========================= */
+
+main {
+    margin-left: 260px;
+    width: calc(100% - 260px);
+    padding: 20px;
+}
+
+/* ========================= */
+/* TOPBAR */
+/* ========================= */
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f1b2d;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.topbar button {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.topbar .pesquisa {
+    display: flex;
+    gap: 5px;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.topbar .pesquisa input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+}
+
+.topbar .pesquisa button {
+    background: #00d084;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.topbar .usuario {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topbar .usuario i {
+    font-size: 28px;
+    color: #00d084;
+}
+
+.topbar .usuario h4 {
+    font-size: 14px;
+}
+
+.topbar .usuario span {
+    font-size: 12px;
+    color: #aaa;
+}
+section {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* ========================= */
+/* CARDS DO DASHBOARD */
+/* ========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #000000;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgb(73, 112, 252);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00d084;
+}
+
+.card h3 {
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 20px;
+    color: #fff;
+}
+
+/* cores por tipo */
+.card.receita h2 {
+    color: #00d084;
+}
+
+.card.despesa h2 {
+    color: #42a0f8;
+}
+
+.card.lucro h2 {
+    color: #f9ff4d;
+}
+
+/* ========================= */
+/* GRÁFICOS */
+/* ========================= */
+
+.graficos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.grafico {
+    background: #0f1b2d;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.grafico h2 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #00d084;
+}
+
+/* canvas */
+canvas {
+    width: 100% !important;
+    height: 250px !important;
+}
+
+/* ========================= */
+/* TABELAS */
+/* ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0f1b2d;
+    border-radius: 12px;
+    border-color: #cfd8dc;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+table thead {
+    background: #16263d;
+    border-color: #cfd8dc;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+table tr {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-color: #cfd8dc;
+}
+
+table tr:hover {
+    background: #16263d;
+    border-color: #cfd8dc;
+}
+
+/* status cores */
+.status-pago {
+    color: #00d084;
+    font-weight: bold;
+}
+
+.status-pendente {
+    color: #ffcc00;
+    font-weight: bold;
+}
+
+.status-atrasado {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* ========================= */
+/* MOVIMENTAÇÕES */
+/* ========================= */
+
+.movimentacoes {
+    background: #0f1b2d;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    margin-top: 20px;
+}
+/* ========================= */
+/* FORMULÁRIOS */
+/* ========================= */
+
+.formulario {
+    background: #0f1b2d;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    margin-bottom: 20px;
+}
+
+.formulario h2 {
+    margin-bottom: 15px;
+    color: #00d084;
+    font-size: 16px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+label {
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: #16263d;
+    color: #fff;
+    font-size: 14px;
+}
+
+input:focus, select:focus {
+    border: 1px solid #00d084;
+}
+
+/* ========================= */
+/* BOTÕES */
+/* ========================= */
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #00d084;
+    color: #0b1320;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00b870;
+    transform: scale(1.03);
+}
+
+/* ========================= */
+/* FILTROS */
+/* ========================= */
+
+.filtros {
+    display: flex;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.filtros input,
+.filtros select {
+    flex: 1;
+}
+
+/* ========================= */
+/* PRODUÇÃO */
+/* ========================= */
+
+.cardsProducao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.cardResumo {
+    background: #0f1b2d;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+    text-align: center;
+}
+
+.cardResumo h3 {
+    font-size: 13px;
+    color: #aaa;
+}
+
+.cardResumo h2 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #00d084;
+}
+
+/* ========================= */
+/* RELATÓRIOS */
+/* ========================= */
+
+.acoesRelatorio {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* ========================= */
+/* CONFIGURAÇÕES */
+/* ========================= */
+
+.config {
+    background: #0f1b2d;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.config input,
+.config select {
+    margin-bottom: 10px;
+}
+
+/* ========================= */
+/* RESPONSIVIDADE */
+/* ========================= */
+
+@media (max-width: 900px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    main {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        position: absolute;
+        left: -220px;
+        transition: 0.3s;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .topbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .filtros {
+        flex-direction: column;
+    }
+}
+
+/* =========================
+   CORREÇÃO: navegação ativa (compatível com JS)
+========================= */
+
+.sidebar ul li.active {
+    background: #dbe365;
+    border-radius: 12px;
+}
+
+.sidebar ul li.active a {
+    color: #0b1320 !important;
+}
+
+/* =========================
+   SEÇÃO CLIENTES (NOVO)
+========================= */
+
+#clientes {
+    padding: 20px;
+}
+
+#clientes h1 {
+    color: #00d084;
+}
+
+#clientes .formulario {
+    margin-top: 15px;
+}
+
+/* tabela clientes */
+#tabelaClientes {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    background: #0f1b2d;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#tabelaClientes th,
+#tabelaClientes td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 14px;
+}
+
+#tabelaClientes th {
+    background: #16263d;
+    color: #00d084;
+}
+
+/* =========================
+   BOTÕES DE AÇÃO (PEDIDOS ADMIN)
+========================= */
+
+td button {
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    margin: 2px;
+    font-weight: bold;
+}
+
+/* Produção */
+td button:nth-child(1) {
+    background: #42a0f8;
+    color: #fff;
+}
+
+/* Enviar */
+td button:nth-child(2) {
+    background: #ffcc00;
+    color: #0b1320;
+}
+
+/* Entregue */
+td button:nth-child(3) {
+    background: #00d084;
+    color: #0b1320;
+}
+
+/* hover geral dos botões da tabela */
+td button:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+/* =========================
+   MELHORIA VISUAL INPUT FOCUS
+========================= */
+
+input:focus,
+select:focus {
+    outline: none;
+    border: 1px solid #00d084;
+    box-shadow: 0 0 5px rgba(0, 208, 132, 0.3);
+}
+
+/* =========================
+   SCROLL BONITO TABELAS
+========================= */
+
+table {
+    overflow-x: auto;
+    display: block;
+}
