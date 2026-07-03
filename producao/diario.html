@@ -1,97 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Relatórios Empresariais</title>
+    <title>Diário da Produção</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-
-    <!-- Cabeçalho -->
     <header>
-        <div class="Nexus Infity">
-            <img src="https://yt3.googleusercontent.com/ykRuKvkEJM4nFkrM_wslB9xLAhX7mJ2G2AqRXHHp3j1RI1TUQ2aprEpvTnYxPgSZs1jyHPo6sOg=s900-c-k-c0x00ffffff-no-rj" alt="Logo">
-        </div>
-
-        <div class="titulo">
-            <h1>Sistema de Relatórios Empresariais</h1>
-        </div>
+        <h1> Diário da Produção</h1>
     </header>
 
-    <!-- Conteúdo -->
     <main>
 
-        <!-- Menu lateral -->
-        <aside class="menu">
+        <section class="card">
 
-            <button class="menu-btn">
-                Novo Relatório
-            </button>
+            <h2>Registro das Atividades</h2>
 
-            <button class="menu-btn">
-                Relatórios
-            </button>
+            <table>
 
-        </aside>
+                <thead>
 
-        <!-- Área principal -->
-        <section class="conteudo">
+                    <tr>
+                        <th>Data</th>
+                        <th>Descrição</th>
+                    </tr>
 
-            <h2>RELATÓRIO DO DIA</h2>
+                </thead>
 
-            <form id="relatorio">
+                <tbody>
 
-                <div class="linha">
-                    <label>Setor:</label>
-                    <input type="text" name="setor" placeholder="Produção" required>
-                </div>
+                    <tr>
+                        <td>03/06/2026</td>
 
-                <div class="linha">
-                    <label>Responsável:</label>
-                    <input type="text" name="responsavel" placeholder="Guilherme" required>
-                </div>
+                        <td>
+                            Houve uma mudança de gerente. A produção passou a ser gerenciada por Ellen, com Rebecca como
+                            subgerente. Definimos os responsáveis pelos materiais, quem iniciaria a produção no dia
+                            08/06 e estabelecemos o prazo para entrega dos materiais.
+                        </td>
 
-                <div class="linha">
-                    <label>Data:</label>
-                    <input type="date" name="data" required>
-                </div>
+                    </tr>
 
-                <div class="campo">
-                    <label>Atividades</label>
-                    <textarea rows="4" name="atividades"></textarea>
-                </div>
+                    <tr>
 
-                <div class="campo">
-                    <label>Problemas</label>
-                    <textarea rows="4" name="problemas"></textarea>
-                </div>
+                        <td>07/06/2026</td>
 
-                <div class="campo">
-                    <label>Soluções</label>
-                    <textarea rows="4" name="solucoes"></textarea>
-                </div>
+                        <td>
+                            Foi enviada uma mensagem no grupo para lembrar os funcionários de levarem os materiais e
+                            confirmar quem participaria da produção no dia seguinte.
+                        </td>
 
-                <div class="campo">
-                    <label>Observações</label>
-                    <textarea rows="4" name="observacoes"></textarea>
-                </div>
+                    </tr>
 
-                <button type="submit" class="salvar">
-                    Salvar Relatório
-                </button>
+                    <tr>
 
-            </form>
+                        <td>08/06/2026</td>
+
+                        <td>
+                            No dia da produção, o funcionário responsável por trazer o papelão não compareceu. A equipe
+                            conseguiu o material na secretaria da escola, permitindo que o protótipo fosse praticamente
+                            concluído.
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>09/06/2026</td>
+
+                        <td>
+                            Foram realizados em casa os acabamentos finais e a finalização do protótipo.
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>26/06/2026</td>
+                        <td>
+                            Sexta-feira, dia 26 de junho, foi decidido quem iria fazer o boliche de garrafas PET. Também
+                            foram definidos os responsáveis pelos materiais, cores e prazo de entrega, além do início da
+                            produção marcado para segunda-feira, dia 29.
+
+                            Os responsáveis pela pintura das garrafas foram Davi e Guilherme. Nicolas ficou responsável
+                            por levar as tintas, afirmando que já as possuía.
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>29/06/2026</td>
+                        <td>
+                            Na segunda-feira, prazo de início da produção, Nicolas levou apenas duas tintas, e ambas não
+                            faziam parte da paleta de cores definida pelo grupo. Isso dificultou o andamento inicial do
+                            projeto do boliche de garrafas PET.
+                        </td>
+                    </tr>
+
+                </tbody>
+
+            </table>
 
         </section>
 
     </main>
 
-</div>
+    <footer>
 
-<script src="script.js"></script>
+        <p>© 2026 Nexus Infinity</p>
+
+    </footer>
 
 </body>
+
 </html>
