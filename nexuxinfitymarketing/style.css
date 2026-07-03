@@ -1,0 +1,283 @@
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BASE ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #ffffff;
+    color: #111;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #0b0f1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+    border-bottom: 2px solid #00ff88;
+}
+
+/* ===== LOGO (NEXUS iNFINITY) ===== */
+.logo h1 {
+    font-size: 30px;
+    color: #00ff88;
+    letter-spacing: 3px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.logo span {
+    color: #00aaff;
+    text-shadow: 
+        0 0 8px #00aaff,
+        0 0 15px #00ff88;
+    font-weight: 700;
+}
+
+
+header {
+    background-image: url("logo.png");
+  background-color: black; /* Used if the image is unavailable */
+  height: 50px; /* You must set a specified height */
+  background-position: left; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: 15% auto;
+display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 15px 40px;
+  z-index: 1000;
+  border-bottom: 2px solid #00ff88;
+}
+
+
+/* ===== MENU ===== */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ff88;
+}
+
+/* ===== HERO ===== */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(135deg, #ffffff, #e8f0ff);
+}
+
+.hero-text h2 {
+    font-size: 52px;
+    color: #0b0f1a;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.hero-text p {
+    max-width: 750px;
+    margin: 0 auto 25px;
+    color: #333;
+    font-size: 18px;
+}
+
+/* ===== BOTÃO ===== */
+.botao {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #00aaff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-weight: 600;
+}
+
+.botao:hover {
+    background: #00ff88;
+    color: #0b0f1a;
+    transform: scale(1.05);
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    padding: 90px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.container h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 30px;
+    color: #0b0f1a;
+}
+
+/* ===== CARDS ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #00ff88;
+    box-shadow: 0 10px 20px rgba(0,255,136,0.2);
+}
+
+.card h3 {
+    color: #0b0f1a;
+    margin-bottom: 10px;
+}
+
+/* ===== TEXTOS ===== */
+.texto {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    color: #444;
+    font-size: 17px;
+}
+
+/* ===== LISTA ===== */
+.info {
+    max-width: 850px;
+    margin: auto;
+    text-align: left;
+}
+
+.info ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.info li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background: #0b0f1a;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 2px solid #00ff88;
+}
+
+footer h3 {
+    color: #00aaff;
+    margin-bottom: 10px;
+}
+
+footer .copy {
+    font-size: 12px;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-text h2 {
+        font-size: 34px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+    }
+}
+
+/* ===== MODAL ===== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-left: 5px solid #00ff88;
+}
+
+.modal-content h2 {
+    margin-bottom: 15px;
+    color: #0b0f1a;
+}
+
+.modal-content p {
+    color: #333;
+    font-size: 15px;
+}
+
+.close {
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 430px;
+    font-size: 25px;
+    cursor: pointer;
+    color: #000;
+}
+
+.close:hover {
+    color: #00ff88;
+}

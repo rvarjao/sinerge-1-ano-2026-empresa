@@ -16,8 +16,9 @@
 
     <!-- ===== HEADER ===== -->
     <header>
-    
-        
+        <div class="logo">
+            <h1>NEXUS <span>iNFINITY</span></h1>
+        </div>
 
         <nav>
             <ul>

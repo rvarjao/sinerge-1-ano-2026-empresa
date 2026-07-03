@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinerge</title>
+</head>
+<body>
+    <section></section>
+    <h1> nexus infinty- Recursos humanos</h1>
+    <p>Paragrafo de apresentação do projeto</p>
+    <section>
+    </section>
+    <h3>Recursos humanos </h3>
+    <!--LISTA COM NOMES DOS MEBROS DA EQUIPE-->
+    <uL>
+        <li>Maria Luiza</li>
+        <li>Maria eduarda</li>
+        </uL>
+    </section>
+    <section>
+        <h3>responsabilidades </h3>
+        <!--cuidar do bem- estar de todos da empresa, fazer diarios-->
+        <ul>
+            <li>controlar o bem estar de todos da empresa</li>
+            <li>fazer diarios</li>
+            </ul>
+            <section>
+            </section>
+            <h3>objetivo</h3>
+            <p>conversamos com todos da emprersa para saber do bem estar e se tinham alguma reclamação a fazer</p>
+    </section>
+</section>
+<h3>resumo ou conclusão</h3>
+<!--paramos para conversar com todos da empresa, perguntamos se estavam bem ou tinham alguma reclamação, tentamos resover os problemas de todos-->
+o setor da produção conseguiu fazer o projeto, e ficou incrivel
+a maior dificuldade foi agradar a todos
+aprendemos a entender o lado de cada um
+o rh ajuda em tudo e em todas as areas
+</section>
+<Section>
+    <h3>diario das atividades</h3>
+    <span>clique <a href="diario.html">aqui</a> acesse o diario das atividades</span>
+    </Section>
+</body>
+</html
