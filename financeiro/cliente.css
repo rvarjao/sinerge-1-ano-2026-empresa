@@ -1,0 +1,101 @@
+/* ========================= */
+/* BASE */
+/* ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b1320;
+    color: #fff;
+    padding: 30px;
+}
+
+/* ========================= */
+/* CONTAINER */
+/* ========================= */
+
+.container {
+    max-width: 900px;
+    margin: auto;
+
+    background: #0f1b2d;
+    padding: 20px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Título */
+h2 {
+    color: #00d084;
+    margin-bottom: 20px;
+}
+
+/* ========================= */
+/* TABELA */
+/* ========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #0f1b2d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background: #16263d;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    font-size: 14px;
+}
+
+tr {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+tr:hover {
+    background: #16263d;
+}
+
+/* ========================= */
+/* STATUS (PADRÃO SISTEMA) */
+/* ========================= */
+
+.status-ok {
+    color: #00d084; /* verde do sistema */
+    font-weight: bold;
+}
+
+.status-pendente {
+    color: #ffcc00; /* amarelo do sistema */
+    font-weight: bold;
+}
+
+.status-producao {
+    color: #42a0f8; /* azul do sistema */
+    font-weight: bold;
+}
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
