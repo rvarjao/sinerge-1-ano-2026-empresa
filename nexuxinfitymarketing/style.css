@@ -281,3 +281,8 @@ footer .copy {
 .close:hover {
     color: #00ff88;
 }
+
+footer img {
+    width: 200px;
+    margin-bottom: 10px;    
+}
